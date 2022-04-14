@@ -17,7 +17,6 @@ body {
     font-family: 'Mulish';
     margin: 0px;
     padding: 0px;
-    background-color: black;
     margin: 0px auto;
 }
 
@@ -33,6 +32,7 @@ a {
     position: relative;
     height: 1000px;
     width: 1000px;
+    background-color: black;
 }
 
 .layout1 header {
@@ -227,11 +227,148 @@ a .logo {
     left: 106px;
 }
 
-footer {
+.footerStyle {
     position: absolute;
     bottom: 0px;
     height: 121px;
     width: 100%;
     background-color: #d6d6d6;
     opacity: 0.9;
+}
+
+.layout3 {
+    width: 1000px;
+}
+
+.layout3 header {
+    background-color: #212121;
+    width: 500px;
+    height: 500px;
+    position: relative;
+}
+
+.layout3 .logo2 {
+    display: flex;
+    margin-top: 40px;
+    margin-left: 37px;
+}
+
+.layout3 .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 348px;
+}
+
+.layout3 .btn {
+    display: flex;
+    background: none;
+    border: none;
+    cursor: crosshair;
+    font-size: 150px;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.layout3 #reset {
+    position: absolute;
+    bottom: 100px;
+    background: none;
+    border: none;
+    cursor: crosshair;
+    font-size: 20px;
+    align-items: flex-end;
+    justify-content: flex-end;
+    color: #ffffff;
+}
+
+.layout3 header nav {
+    display: flex;
+    background-color: #ffcdd2;
+    width: 500px;
+    height: 62px;
+    position: absolute;
+    bottom: 0px;
+}
+
+.layout3 header nav a {
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    width: 167px;
+}
+
+.layout3 header nav a:hover {
+    transition: 0.2s;
+    font-weight: 800;
+    background-color: blueviolet;
+}
+
+.layout3 section {
+    background-color: #212121;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.layout3 section div {
+    background-color: #ffffff;
+    width: 250px;
+    height: 250px;
+}
+
+.layout3 .box1 {
+    opacity: 0.25;
+}
+
+.box2 {
+    opacity: 0.5;
+}
+
+.box3 {
+    opacity: 0.75;
+}
+
+.box4 {
+    opacity: 1;
+}
+
+.layout3 main {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: red;
+    height: 100%;
+}
+
+.layout3 .block {
+    width: 250px;
+    height: 250px;
+    background-color: black;
+}
+
+#upperPage {
+    display: flex;
+}
+
+.layout3 footer {
+    height: 121px;
+    width: 100%;
+    background-color: #d6d6d6;
+    opacity: 0.9;
+}
+
+@media(max-width: 1000px) {
+    .layout3 {
+        width: 500px;
+    }
+    .layout3 .logo2 {
+        margin-left: 41%;
+    }
+    .layout3 section {
+        display: none
+    }
 }
