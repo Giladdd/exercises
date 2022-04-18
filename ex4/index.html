@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Nova Flat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Allerta Stencil' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <title>Gilad ex4</title>
+
+</head>
+
+<body class="wrapper">
+
+    <header>
+        <h1>YOUR EGGS FORM</h1>
+    </header>
+
+
+    <section class="box">
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+    </section>
+
+
+
+
+    <main>
+        <section class="game">
+            <div id="gameFrame" onclick="myGunSound.play()">
+
+                <div id="healthBar"></div>
+
+                <div class="enemy" id="enemy1" onclick="iShoot(this)"></div>
+                <div class="enemy" id="enemy2" onclick="iShoot(this)"></div>
+                <div class="enemy" id="enemy3" onclick="iShoot(this)"></div>
+                <div class="enemy" id="enemy4" onclick="iShoot(this)"></div>
+                <div class="enemy" id="enemy5" onclick="iShoot(this)"></div>
+
+            </div>
+
+            <p style="text-align: center;">
+                <button onclick="newGame()">NEW GAME</button>
+            </p>
+
+        </section>
+
+        <section class="frm">
+            <form action="http://se.shenkar.ac.il/teach/web1/get_form3.php" method="GET">
+
+                <div class="mb-3">
+                    <label class="form-label">Name(gg):
+                    <input type="text" name="fullName" placeholder="Name(gg)" class="form-control" pattern=".*\s.*">
+                </label>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">
+                        Password:
+                        <input type="password" pattern="[a-zA-Z0-9]{6,10}" name="pass" placeholder="password"
+                            class="form-control">
+                    </label>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">
+                        Egg-mail:
+                        <input type="email" name="mail" placeholder="egg-mail" class="form-control">
+                    </label>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">
+                        Your favorite egg Website:
+                        <input type="url" name="website" placeholder="website" class="form-control">
+                    </label>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">
+                        Phone(gg):
+                        <input type="tel" name="phone" placeholder="phone(gg)" class="form-control" pattern="[0-9]{9,10}">
+                    </label>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">
+                        How much protein is in one egg?
+                        <input type="number" name="coffee" placeholder="protein" class="form-control" step="1">
+                    </label>
+                </div>
+
+                <label class="form-label">
+                    The amount of eggs you eat per day:
+                    <input type="range" name="temper" class="form-range">
+                </label>
+                <br>
+
+                <div class="mb-3">
+                    <label class="form-label">
+                        Favorite topping:
+                        <textarea name="address" rows="3" cols="30" placeholder="Topping"
+                            class="form-control"></textarea>
+                    </label>
+                </div>
+
+                <span>Favorite type of eggs:</span><br>
+
+
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="checkbox" name="interests[]" value="diving" class="form-check-input">
+                        Fried eggs
+
+                    </label>
+                </div>
+
+
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="checkbox" name="interests[]" value="Photography" class="form-check-input">
+                        Hard-boiled
+
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="checkbox" name="interests[]" value="Coding" class="form-check-input">
+                        Scrambled eggs
+
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="checkbox" name="interests[]" value="Football" class="form-check-input">
+                        Baked eggs
+
+                    </label>
+                </div>
+
+                <br>
+                <span>Gender:</span><br>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        Male(gg)
+                        <input type="radio" name="gender" value="Male" class="form-check-input">
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <label class="form-check-label">
+                        Female(gg)
+                        <input type="radio" name="gender" value="Female" class="form-check-input">
+                    </label>
+                </div>
+                <br>
+                <label>
+                    Age(gg):
+                    <select name="age" required class="form-select">
+                        <option value="21" selected>21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+
+
+                    </select>
+                </label>
+                <br>
+                <br>
+
+
+
+                <input type="submit" value="Submit" class="btn btn-primary" id="submit">
+            </form>
+
+
+
+        </section>
+
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="./js/script.js"></script>
+
+</body>
+
+</html>
